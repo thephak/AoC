@@ -28,10 +28,7 @@ def getPassword(rotations):
     return count_zero
 
 
-# current 47 rotation L847 pass_zero 9 new_current -800
 
-
-# print(getPassword(["R22", "L745"]))
 
 # print(getPassword(["R1000"]))
 # 10
