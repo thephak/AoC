@@ -1,4 +1,4 @@
-# https://adventofcode.com/2025/day/1
+# https://adventofcode.com/2025/day/1#part2
 import math
 
 def rotate(current, rotation):
