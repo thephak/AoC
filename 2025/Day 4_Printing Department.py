@@ -9,7 +9,6 @@ def is_paper(grid, i, j, recursive):
     else:
         return 0
 
-
 def remove_paper(input_data, recursive = False):
     rows = input_data.split('\n')
     grid = []
