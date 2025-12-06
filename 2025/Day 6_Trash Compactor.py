@@ -1,8 +1,11 @@
 # https://adventofcode.com/2025/day/6
+import operator
+
+ops = { "+": operator.add, "*": operator.mul }
 
 def calculate(input_data):
     rows = input_data.split('\n')
-    operations = [o for o in rows[-1].split(' ') if len(o) > 0]
+    operations = [ops[o] for o in rows[-1].split(' ') if len(o) > 0]
     data = []
 
     # iterate thru each row
@@ -18,10 +21,7 @@ def calculate(input_data):
         else:
             # iterate thru each number in the row
             for j, num in enumerate(current_nums):
-                if operations[j] == '+':
-                    data[j] += num
-                else:
-                    data[j] *= num
+                data[j] = operations[j](data[j], num)
 
     return sum(data)
 
